@@ -9,7 +9,7 @@ local email_recipient = 'user@example.com' -- user email address
 debug("Started")
 
 while true do
-  local timetsamp = dataport_alias.wait()
-  email(email_recipient, "New Data", dataport_alias[timetsamp])
-  debug("Triggered: "..dataport_alias[timetsamp])
+  local timestamp = dataport_alias.wait()
+  email(email_recipient, "New Data", dataport_alias[timestamp])
+  debug("Triggered: "..dataport_alias[timestamp])
 end
